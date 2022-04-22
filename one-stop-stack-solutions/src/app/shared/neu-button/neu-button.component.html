@@ -1,0 +1,25 @@
+<style>
+  div {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    background: var(--primary-color);
+    cursor: pointer;
+  }
+
+  div:hover {
+    color: var(--text-hover-color);
+  }
+</style>
+
+<div
+  [ngStyle]="{
+    'border-radius': configs.border_radius,
+    width: configs.width,
+    height: 'configs.height'
+  }"
+>
+  {{ configs.text }}
+</div>

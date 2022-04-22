@@ -1,0 +1,77 @@
+<style>
+  .wrapper {
+    min-height: 280px;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 70px;
+    border-radius: 12px;
+    border: 2px solid var(--shadow-black);
+    transition: 0.4s all;
+  }
+
+  .wrapper:hover {
+    box-shadow: var(--box-shadow-inset);
+    transition: 0.4s all;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+    left: 10%;
+    position: relative;
+    transform: translateX(-10%);
+    transform: translateY(-40px);
+  }
+
+  .title {
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    transform: translateY(-20px);
+  }
+  .sub-title {
+    padding: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    transform: translateY(-20px);
+  }
+
+  .explore {
+    width: 120px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--primary-color);
+    box-shadow: var(--box-shadow);
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  .explore:hover {
+    color: var(--text-hover-color);
+  }
+</style>
+
+<div class="wrapper">
+  <div class="logo"></div>
+  <div class="title">{{ configs.title }}</div>
+  <div class="sub-title"></div>
+  <div class="explore">EXPLORE</div>
+</div>
