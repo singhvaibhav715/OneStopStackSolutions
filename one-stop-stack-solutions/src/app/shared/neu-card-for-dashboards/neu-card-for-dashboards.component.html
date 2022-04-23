@@ -25,6 +25,17 @@
     position: relative;
     transform: translateX(-10%);
     transform: translateY(-50px);
+    overflow: hidden;
+    object-fit: contain;
+    object-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo > img {
+    width: 60%;
+    height: 60%;
   }
 
   .title {
@@ -75,7 +86,13 @@
 </style>
 
 <div class="wrapper">
-  <div class="logo"></div>
+  <div class="logo">
+    <img
+      src="./assets/images/icons/{{ configs.icon }}.png"
+      class="img-fluid"
+      alt=""
+    />
+  </div>
   <div class="title">{{ configs.title }}</div>
   <div class="sub-title"></div>
   <div class="explore">EXPLORE</div>
