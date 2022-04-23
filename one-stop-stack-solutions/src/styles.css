@@ -6,14 +6,23 @@
 
 :root {
   --primary-color: #dde1e7;
+  --dark-color: #2a2a2c;
   --black-color: black;
   --white-color: white;
+  --theme-text-color: black;
   --box-shadow: -7px -7px 11px #ffffff73, 7px 7px 10px rgba(94, 104, 121, 0.288);
   --box-shadow-inset: inset -7px -7px 11px #ffffff73,
     inset 7px 7px 10px rgba(94, 104, 121, 0.288);
   --shadow-white: #ffffff73;
   --shadow-black: rgba(94, 104, 121, 0.288);
   --text-hover-color: rgb(204, 43, 91);
+  --theme-clip-bg: rgb(2, 0, 36);
+  --theme-clip: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 121, 92, 0.9808123078332895) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
   --button-bg: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -24,4 +33,5 @@
 
 body {
   background-color: var(--primary-color);
+  transition: 0.5s all;
 }

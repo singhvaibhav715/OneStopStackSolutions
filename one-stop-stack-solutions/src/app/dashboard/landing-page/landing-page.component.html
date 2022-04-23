@@ -3,14 +3,17 @@
   <div class="row">
     <div class="col-md-12 mt-2 mb-2 d-flex">
       <div style="margin-left: auto; z-index: 1">
-        <div class="theme-btn">
+        <div class="theme-btn-dark" (click)="toggleTheme()" *ngIf="!dark">
           <span class="material-icons"> dark_mode </span>
+        </div>
+        <div class="theme-btn-light" (click)="toggleTheme()" *ngIf="dark">
+          <span class="material-icons"> light_mode </span>
         </div>
       </div>
     </div>
     <div class="col-md-12 d-flex logo-wrapper">
       <img
-        src=".\assets\images\logo\logo.png"
+        src=".\assets\images\logo\{{ logoName }}.png"
         alt="logo"
         class="logo img-fluid"
       />
@@ -20,12 +23,16 @@
       <p>deep dive to find the tech treasure !</p>
     </div>
 
-    <div class="col-md-12 d-flex search">
-      <input type="text" placeholder="Find your treasure here." />
+    <div class="col-md-12 d-flex get-started-btn">
+      <div class="get-started">get started</div>
+    </div>
+
+    <div class="col-md-12 d-flex scroll">
+      <span class="material-icons"> mouse </span>
     </div>
   </div>
 </div>
 
-<div style="z-index: 1; position: relative; margin-top: 30px">
+<div style="z-index: 1; position: relative; margin-top: 60px">
   <app-card-groups></app-card-groups>
 </div>

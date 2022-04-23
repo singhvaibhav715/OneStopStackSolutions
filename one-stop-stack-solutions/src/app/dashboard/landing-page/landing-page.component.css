@@ -1,12 +1,7 @@
 .bg {
   clip-path: circle(73% at 0 11%);
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 121, 92, 0.9808123078332895) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: var(--theme-clip-bg);
+  background: var(--theme-clip);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -21,7 +16,7 @@
   max-height: 150px;
   width: auto;
 }
-.theme-btn {
+.theme-btn-dark {
   align-items: center;
   position: relative;
   justify-content: center;
@@ -32,8 +27,25 @@
   box-shadow: var(--box-shadow);
   cursor: pointer;
 }
-.theme-btn > span {
+.theme-btn-dark > span {
   font-size: 30px;
+  transform: translate(10px, 10px);
+}
+
+.theme-btn-light {
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--dark-color);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+.theme-btn-light > span {
+  font-size: 30px;
+  color: var(--white-color);
   transform: translate(10px, 10px);
 }
 
@@ -48,30 +60,56 @@
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
+  color: var(--theme-text-color);
   font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
   text-align: center;
 }
 
-.search {
+.get-started-btn {
   position: relative;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
 
-.search > input {
-  height: 60px;
-  outline: none;
-  border: none;
+.get-started-btn > .get-started {
+  height: 40px;
   background: var(--primary-color);
-  box-shadow: var(--box-shadow-inset);
+  box-shadow: var(--box-shadow);
   padding-left: 20px;
   padding-right: 20px;
-  width: 324px;
+  width: 254px;
   border-radius: 20px;
+  font-size: 20px;
+  color: var(--theme-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.get-started-btn > .get-started:hover {
+  color: var(--text-hover-color);
+  transform: scale(1.09);
+  transition: 0.4s all;
+}
+
+.scroll {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  bottom: -60px;
+}
+
+.scroll > span {
+  font-size: 40px;
+  color: var(--theme-text-color);
 }
 
 .card-group {
   position: relative;
+  margin-top: 20px;
 }
