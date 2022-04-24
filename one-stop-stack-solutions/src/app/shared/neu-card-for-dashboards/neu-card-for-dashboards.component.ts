@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-neu-card-for-dashboards',
@@ -8,9 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class NeuCardForDashboardsComponent implements OnInit {
 
   @Input("configs") configs:any
-  constructor() { }
+  constructor(private _router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateTo(value:string){
+    this._router.navigate(["/"+value])
   }
 
 }

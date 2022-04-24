@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from './dashboard/landing-page/landing-page.component';
+import { route_paths } from './routing-data';
 
-const routes: Routes = [
-  {
-    path:"", component:LandingPageComponent
-  }
-];
+const routes: Routes = route_paths
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
