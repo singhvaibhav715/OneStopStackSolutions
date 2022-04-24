@@ -150,6 +150,12 @@ export const card_data=[
         redirectLink:"",
     },
     {
+        icon:"projects",
+        title:"projects on python",
+        sub_title:"",
+        redirectLink:"",
+    },
+    {
         icon:"mysql",
         title:"mysql",
         sub_title:"",

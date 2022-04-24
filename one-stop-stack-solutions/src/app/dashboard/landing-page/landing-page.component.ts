@@ -39,4 +39,8 @@ export class LandingPageComponent implements OnInit {
     document.documentElement.style.setProperty('--theme-clip',color.clipBG)
   }
 
+  scrollToCards(){
+    document.getElementById('tech-cards')?.scrollIntoView();
+  }
+
 }

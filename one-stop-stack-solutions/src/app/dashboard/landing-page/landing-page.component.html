@@ -24,7 +24,7 @@
     </div>
 
     <div class="col-md-12 d-flex get-started-btn">
-      <div class="get-started">get started</div>
+      <div class="get-started" (click)="scrollToCards()">get started</div>
     </div>
 
     <div class="col-md-12 d-flex scroll">
@@ -33,6 +33,6 @@
   </div>
 </div>
 
-<div style="z-index: 1; position: relative; margin-top: 60px">
+<div id="tech-cards" style="z-index: 1; position: relative; margin-top: 60px">
   <app-card-groups></app-card-groups>
 </div>
