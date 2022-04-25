@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemesService } from 'src/app/services/themes.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,17 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _theme: ThemesService) { }
 
   ngOnInit(): void {
+    this._theme.currentTheme.subscribe(res=>{
+      this.dark=res
+      this._theme.currentLogo.subscribe(res=>{
+        this.logoName=res
+      })
+    })
   }
 
   dark:boolean=false
   logoName="logo"
   toggleTheme(){
     this.dark=!this.dark
+    this._theme.currentTheme.next(this.dark)
     this.dark===true?this.changeTheme(this.darkColor):this.changeTheme(this.lightColor)
     this.dark===true?this.logoName="logo-white":this.logoName="logo"
+    this._theme.currentLogo.next(this.logoName)
   }
 
   lightColor={
